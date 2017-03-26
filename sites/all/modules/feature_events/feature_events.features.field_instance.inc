@@ -187,8 +187,8 @@ function feature_events_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'name' => '',
-        'lat' => 44.4679073,
-        'lon' => -73.2148532,
+        'lat' => 44.4680565,
+        'lon' => '-73.2147340',
         'zoom' => 17.5,
         'enter_defaults' => 'Defaults',
         'clear_fields' => 'Clear Fields',
