@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature: Articles feature.
+ */
+
+include_once 'feature_articles.features.inc';
