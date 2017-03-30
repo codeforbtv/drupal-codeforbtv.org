@@ -10,6 +10,20 @@
 function feature_wysiwyg_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(),
+    'module' => 'media',
+  );
+
+  // Exported permission: 'add media from remote sources'.
+  $permissions['add media from remote sources'] = array(
+    'name' => 'add media from remote sources',
+    'roles' => array(),
+    'module' => 'media_internet',
+  );
+
   // Exported permission: 'administer ckeditor'.
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
@@ -17,6 +31,13 @@ function feature_wysiwyg_user_default_permissions() {
       'editor' => 'editor',
     ),
     'module' => 'ckeditor',
+  );
+
+  // Exported permission: 'administer media browser'.
+  $permissions['administer media browser'] = array(
+    'name' => 'administer media browser',
+    'roles' => array(),
+    'module' => 'media',
   );
 
   // Exported permission: 'customize ckeditor'.

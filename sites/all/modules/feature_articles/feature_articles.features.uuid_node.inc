@@ -46,6 +46,7 @@ function feature_articles_uuid_features_default_content() {
   'path' => array(
     'pathauto' => 1,
   ),
+  'comment_count' => 0,
   'pathauto_perform_alias' => FALSE,
   'date' => '2017-03-29 08:26:31 -0400',
   'user_uuid' => '6cbd2bc7-e164-449d-b622-e8c8cf5fc2e1',
