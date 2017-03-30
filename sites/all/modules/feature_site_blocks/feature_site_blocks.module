@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature: Site Blocks feature.
+ */
+
+include_once 'feature_site_blocks.features.inc';
