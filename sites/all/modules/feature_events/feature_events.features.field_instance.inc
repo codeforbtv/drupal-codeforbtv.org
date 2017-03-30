@@ -10,51 +10,6 @@
 function feature_events_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-body'.
-  $field_instances['node-event-body'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => 0,
-    'settings' => array(
-      'display_summary' => 0,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance: 'node-event-field_address'.
   $field_instances['node-event-field_address'] = array(
     'bundle' => 'event',
@@ -108,7 +63,7 @@ function feature_events_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 34,
+      'weight' => 3,
     ),
   );
 
@@ -177,7 +132,47 @@ function feature_events_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 32,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_event_body'.
+  $field_instances['node-event-field_event_body'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_body',
+    'label' => 'Event Body',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
     ),
   );
 
@@ -224,15 +219,15 @@ function feature_events_field_default_field_instances() {
       'module' => 'google_map_field',
       'settings' => array(),
       'type' => 'google_map_field_widget',
-      'weight' => 33,
+      'weight' => 2,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Body');
   t('Date & Time');
+  t('Event Body');
   t('Map');
 
   return $field_instances;
