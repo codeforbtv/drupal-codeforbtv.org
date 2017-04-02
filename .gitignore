@@ -5,3 +5,6 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 /nbproject/private/
+
+nbproject/
+.DS_Store
