@@ -6,6 +6,8 @@ base theme = tweme
 stylesheets[all][] = css/my-styles.css
 stylesheets[all][] = css/my-font.css
 
+scripts[] = javascript/bootstrap_menu_override.js
+
 regions[body_top] = Body top
 regions[page_top] = Page top
 regions[header] = Header
