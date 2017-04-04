@@ -4,3 +4,7 @@
 #page-wrapper, #footer-wrapper {
     background: #ffffff;
 }
+/* hack to hide label on search field in admin bar - it was making the admin bar taller because it was wrapping*/
+#admin-menu-wrapper label.control-label {
+    display: none;
+}
