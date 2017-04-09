@@ -1,19 +1,18 @@
+<?php
+    // This is how I make the image that is set in admin/appearance/settings/cfbtv
+    // available in the css.
+    $homepage_hero_img = variable_get('hero_image_url');
+    drupal_add_css(".region.region-header { background: url('$homepage_hero_img') no-repeat fixed }",$option['type'] = 'inline');
+?>
+
+<?php 
+/** Note that unlike the parent Tweme theme, this has been modified to only
+ *  expect a single block.  The Tweme region--header.tpl.php template is a nice
+ *  example of using a carousel, but I'm not going to bother with that.
+ */ ?>
 <?php if ($content): ?>
-<?php if ($block_count > 1): ?>
-<div id="header-carousel" class="carousel slide <?php print $classes ?>" data-ride="carousel">
-  <div class="carousel-inner">
-    <?php print $content ?>
-  </div>
-  <a class="carousel-control left" href="#header-carousel" data-slide="prev">
-    <i class="glyphicon glyphicon-chevron-left"></i>
-  </a>
-  <a class="carousel-control right" href="#header-carousel" data-slide="next">
-    <i class="glyphicon glyphicon-chevron-right"></i>
-  </a>
-</div>
-<?php else: ?>
 <div class="<?php print $classes ?>">
   <?php print $content ?>
 </div>
-<?php endif ?>
+
 <?php endif ?>
