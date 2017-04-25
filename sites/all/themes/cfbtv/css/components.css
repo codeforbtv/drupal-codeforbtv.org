@@ -32,3 +32,68 @@
     height: 25px;
     width: 40px;
 }
+
+
+/** Featured Projects */
+.featured-projects .project {
+    /*    border: solid 1em #eeeeee;
+        margin: 1em;*/
+}
+.featured-project-wrapper {
+    margin: 0px auto;
+    position: relative;
+    z-index: 90;
+    border: 5px solid #eeeeee;
+    padding: 0 1em 1em;
+    height: 15em;
+}
+
+
+/** Diagonal Ribbons */
+
+.ribbon-wrapper {
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.ribbon {
+    position: relative;
+    padding: 0;
+    left: -7px;
+    top: 25px;
+    width: 130px;
+    font-size: 18px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    color: #333;
+    text-align: center;
+    text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+    -webkit-transform: rotate(45deg);
+    -moz-transform:    rotate(45deg);
+    -ms-transform:     rotate(45deg);
+    -o-transform:      rotate(45deg);
+    background-color: whitesmoke;
+}
+
+.ribbon:before, .ribbon:after {
+    content: "";
+    border-top:   3px solid #6e8900;   
+    border-left:  3px solid transparent;
+    border-right: 3px solid transparent;
+    position:absolute;
+    bottom: -3px;
+}
+
+.ribbon:before {
+    left: 0;
+}
+.ribbon:after {
+    right: 0;
+}​
