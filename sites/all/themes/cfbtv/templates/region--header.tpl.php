@@ -15,4 +15,4 @@
   <?php print $content ?>
 </div>
 
-<?php endif ?>
+<?php endif;

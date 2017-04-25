@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    cfbtv blue: #4C99D3
+    cfbtv lt-blue: #7bc6ff
+*/
+
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family:Alegreya;
+  font-weight:700;
+  letter-spacing:.05em
+}
+
+h1 {
+    color: #4C99D3;
+}
+
+.header .jumbotron h1, .header .jumbotron h2 {
+    color: black;
+}
+
+a {
+    color: #4C99D3;
+}
+a:hover, a:active {
+    color: #7bc6ff;
+}
+
+.fa-150percent {
+    font-size: 1.5em;
+}
+
