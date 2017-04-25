@@ -29,6 +29,21 @@ function cfbtv_preprocess_page(&$variables, $hook) {
 }
 
 /**
+ * Prevent query strings from being added to css files in dev environments.  The
+ * query string makes it hard from chrome tools to persist changes to disk.  Note
+ * that this requires you to have set the 'environment' variable in your local 
+ * settings.php file.
+ * 
+ * @see http://drupal.stackexchange.com/questions/33603/prevent-css-js-query-hash-when-preformance-is-disabled
+ * @param type $vars
+ */
+function cfbtv_process_html(&$vars) {
+  if (variable_get('environment') == 'development' && !stristr($_GET['q'],'flush-cache')) {
+    $vars['styles'] = preg_replace('/\.css\?.*"/','.css"', $vars['styles']);
+  }
+}
+
+/**
  * By default Drupal does not look for a template of type "page__[contentType].tpl.php"
  * This hook suggests exactly that.  This is what allows me to set a special layout
  * for the projects page and put some project links/info in the right sidebar.
