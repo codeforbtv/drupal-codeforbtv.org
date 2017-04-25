@@ -1,10 +1,16 @@
 <?php
 
 /**
- * Add external stylesheets
+ * Add external stylesheets & assets
  */
 function cfbtv_preprocess_html(&$variables) {
-  drupal_add_css('//openfontlibrary.org/face/alegreya', array('type' => 'external'));
+    
+    // add primary CfBTV font
+    drupal_add_css('//openfontlibrary.org/face/alegreya', array('type' => 'external'));
+    
+    // add font-awesome fonts (but remember the perfomance hit :/ )
+    $filepath = path_to_theme() . '/assets/font-awesome-4.7.0/css/font-awesome.min.css';
+    drupal_add_css($filepath, array('group' => CSS_THEME));
 }
 
 /**
