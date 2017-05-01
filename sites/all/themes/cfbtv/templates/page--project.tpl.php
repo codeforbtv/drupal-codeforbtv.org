@@ -1,9 +1,14 @@
-<?php 
-    $link_attrs = array('attributes' => array('target'=>'_blank', 'class'=> array('fa', 'fa-150percent')));
-    $github_link = isset($node->field_github_link['und'][0]['url']) ? $node->field_github_link['und'][0]['url'] : false;
-    $github_attrs = array_merge_recursive($link_attrs, array('attributes' => array('class'=> array('fa-github'))));
-?>
-<?php 
+<?php
+
+
+$github_link = isset($node->field_github_link['und'][0]['url']) ? $node->field_github_link['und'][0]['url'] : false;
+$website_link = isset($node->field_website_link['und'][0]['url']) ? $node->field_website_link['und'][0]['url'] : false;
+$website_title = isset($node->field_website_link['und'][0]['title']) ? $node->field_website_link['und'][0]['title'] : 'Visit the Website';
+$is_redeployment = isset($node->field_redeployment['und'][0]['value']) ? $node->field_redeployment['und'][0]['value'] : false;
+$redeployment_github_link = isset($node->field_redeployment_github_link['und'][0]['url']) ? $node->field_redeployment_github_link['und'][0]['url'] : false;
+$redeployment_website_link = isset($node->field_redeployment_website_link['und'][0]['url']) ? $node->field_redeployment_website_link['und'][0]['url'] : false;
+$redeployment_website_title = isset($node->field_redeployment_website_link['und'][0]['title']) ? $node->field_redeployment_website_link['und'][0]['title'] : 'Visit Original Project';
+
 /*
  * Sets the page banner.  Defaults to the homepage image, but can be overridden 
  * with an image specified by the node.
@@ -90,21 +95,57 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                 
                 <?php print render($page['content']) ?>
             </section>
+            
+            <!-- LEFT SIDEBAR -->
             <?php if (!empty($page['sidebar_first'])): ?>
                 <aside class="main-col col-md-3 col-md-pull-<?php print $_content_cols ?>">
                     <?php print render($page['sidebar_first']) ?>
                 </aside>
             <?php endif ?>
-            <?php if (!empty($page['sidebar_second'])): ?>
+            
+            <!-- RIGHT SIDEBAR -->
+            <?php if($website_link || $github_link): ?>
                 <aside class="main-col well col-md-3">
+                    <p><strong>Project Details</strong></p>
                     <div>
+                        <?php if($website_link) : ?>
+                            <a href="<?php echo $website_link; ?>">
+                                <i class="fa fa-external-link"></i> <?php echo $website_title; ?>
+                            </a><br/>
+                        <?php endif; ?>
                         <?php if($github_link) : ?>
-                        <a href="<?php echo $github_link; ?>">
-                            <i class="fa fa-github"></i> Visit on Github
-                        </a>
+                            <a href="<?php echo $github_link; ?>">
+                                <i class="fa fa-github"></i> Github Repository
+                            </a><br/>
                         <?php endif; ?>
                     </div>
                 </aside>
+            <?php endif; ?>
+            <?php if($is_redeployment): ?>
+                <aside class="main-col well col-md-3">
+                    <p><strong>Redeployment Details</strong></p>
+                    
+                    <p>
+                        <?php if($redeployment_website_link) : ?>
+                            <a href="<?php echo $redeployment_website_link; ?>">
+                                <i class="fa fa-external-link"></i> <?php echo $redeployment_website_title; ?>
+                            </a><br/>
+                        <?php endif; ?>
+                        <?php if($redeployment_github_link) : ?>
+                            <a href="<?php echo $redeployment_github_link; ?>">
+                                <i class="fa fa-github"></i> Github Repository
+                            </a><br/>
+                        <?php endif; ?>
+                    </p>
+                    
+                    <p>
+                        Code for America brigade projects are opensource and 
+                        intended to be reused wherever possible.  This project
+                        is a redeployment of another project.
+                    </p>
+                </aside>
+            <?php endif; ?>
+            <?php if (!empty($page['sidebar_second'])): ?>
                 <aside class="main-col col-md-3">
                     <?php print render($page['sidebar_second']) ?>
                 </aside>
