@@ -78,7 +78,7 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
 <section class="main">
     <div class="container">
         <div class="row">
-            <?php $_content_cols = 12 - 3 * !empty($page['sidebar_first']) - 3 * !empty($page['sidebar_second']) ?>
+            <?php $_content_cols = 12 - 3 * !empty($page['sidebar_first']) - 4 * !empty($page['sidebar_second']) ?>
             <section class="main-col col-md-<?php print $_content_cols ?><?php print !empty($page['sidebar_first']) ? ' col-md-push-3' : ''  ?>">
                 <?php print $messages ?>
                 <?php print render($page['help']) ?>
@@ -86,12 +86,12 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                 <?php print render($page['content']) ?>
             </section>
             <?php if (!empty($page['sidebar_first'])): ?>
-                <aside class="main-col col-md-3 col-md-pull-<?php print $_content_cols ?>">
+                <aside class="sidebar sidebar__first main-col col-md-3 col-md-pull-<?php print $_content_cols ?>">
                     <?php print render($page['sidebar_first']) ?>
                 </aside>
             <?php endif ?>
             <?php if (!empty($page['sidebar_second'])): ?>
-                <aside class="main-col col-md-3">
+                <aside class="sidebar sidebar__second main-col col-md-4">
                     <?php print render($page['sidebar_second']) ?>
                 </aside>
             <?php endif ?>
