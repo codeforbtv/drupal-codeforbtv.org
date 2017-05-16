@@ -8,8 +8,12 @@ html {
 }
 
 /* drupal overrides */
+.tabs--primary {
+	font-size: .8em;
+}
 .tabs--primary.nav-tabs a {
     background: rgba(255, 255, 255, .7);
+    padding: 5px 20px;
 }
 
 .tabs--primary.nav-tabs a,
@@ -17,4 +21,12 @@ html {
 .nav-tabs > li > a:hover {
     border: solid 1px rgba(76, 153, 211, .3);
     border-bottom-color: transparent;
+}
+
+/* banner border */
+.navbar-default {
+    border-bottom: solid 1px rgba(76, 153, 211, 1);
+}
+.header {
+	border-bottom: solid 1px rgba(76, 153, 211, .4)
 }
