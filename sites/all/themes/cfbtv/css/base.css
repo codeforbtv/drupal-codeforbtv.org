@@ -2,7 +2,7 @@ html {
     background: #ffffff;
 }
 
-img {
+.region-content img {
     border: 1px solid grey;
     padding: 7px;
 }
@@ -13,7 +13,8 @@ img {
 }
 
 .tabs--primary.nav-tabs a,
-.tabs--primary.nav-tabs a.active {
-    border: solid 1px #4C99D3;
-    border-bottom-width: 0px;
+.tabs--primary.nav-tabs a.active,
+.nav-tabs > li > a:hover {
+    border: solid 1px rgba(76, 153, 211, .3);
+    border-bottom-color: transparent;
 }
