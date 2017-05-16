@@ -1,4 +1,19 @@
+html {
+    background: #ffffff;
+}
+
+img {
+    border: 1px solid grey;
+    padding: 7px;
+}
+
 /* drupal overrides */
 .tabs--primary.nav-tabs a {
-    background: rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .7);
+}
+
+.tabs--primary.nav-tabs a,
+.tabs--primary.nav-tabs a.active {
+    border: solid 1px #4C99D3;
+    border-bottom-width: 0px;
 }
