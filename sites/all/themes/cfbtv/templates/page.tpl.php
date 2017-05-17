@@ -6,10 +6,10 @@
  */
 if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0]['uri'])) {
     $banner_image_url = image_style_url('banner_image', $node->field_banner_image['und'][0]['uri']);
-    drupal_add_css(".header .jumbotron { background-image: url('$banner_image_url')}",$option['type'] = 'inline');
-} else {
+    drupal_add_css("header.header .jumbotron { background-image: url('$banner_image_url')}",$option['type'] = 'inline');
+} elseif(drupal_is_front_page()) {
     $homepage_hero_img = variable_get('hero_image_url');
-    drupal_add_css(".header .jumbotron { background: url('$homepage_hero_img')}",$option['type'] = 'inline');
+    drupal_add_css("header.header .jumbotron { background: url('$homepage_hero_img')}",$option['type'] = 'inline');
 }
 ?>
 

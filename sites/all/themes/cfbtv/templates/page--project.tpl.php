@@ -17,11 +17,8 @@ $redeployment_website_title = isset($node->field_redeployment_website_link['und'
  */
 if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0]['uri'])) {
     $banner_image_url = image_style_url('banner_image', $node->field_banner_image['und'][0]['uri']);
-    drupal_add_css(".header .jumbotron { background-image: url('$banner_image_url')}",$option['type'] = 'inline');
-} else {
-    $homepage_hero_img = variable_get('hero_image_url');
-    drupal_add_css(".header .jumbotron { background: url('$homepage_hero_img')}",$option['type'] = 'inline');
-}
+    drupal_add_css("header.header .jumbotron { background-image: url('$banner_image_url')}",$option['type'] = 'inline');
+} 
 ?>
 
 <?php print render($page['body_top']) ?>
@@ -132,8 +129,6 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                     <?php if($is_redeployment): ?>
                         <aside class="well">
                             <p><strong>Redeployment Details</strong></p>
-                            
-                            
                             <p>
                                 This project is a redeployment of an existing project.
                                 Brigade projects are opensource and intended to be reused 
