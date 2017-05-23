@@ -1,3 +1,9 @@
-.page-home .block-title {
+.front .main .block-title {
     text-align: center;
+}
+.front .main .block h3 a {
+    color: grey;
+}
+.front .main .block {
+    margin-bottom: 3em;
 }

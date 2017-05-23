@@ -127,12 +127,10 @@
 
 /** Homepage Article display **/
 
-.view-home-page div.field {
-    margin: 20px 0px;
-}
-
-.view-home-page .field-name-field-featured-image {
+.field-name-field-featured-image {
     float: left;
+    width: 300px;
+    margin-right: 2em;
 }
 
 

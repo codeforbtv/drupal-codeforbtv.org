@@ -3,7 +3,7 @@ description = Test theme that extends default drupal theme Tweme (which extends 
 core = 7.x  
 base theme = tweme
 
-stylesheets[all][] = css/page.css
+stylesheets[all][] = css/pages.css
 stylesheets[all][] = css/font.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/components.css
