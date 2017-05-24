@@ -13,10 +13,14 @@ $github_link = isset($node->field_github_link['und'][0]['url']) ? $node->field_g
 $website_link = isset($node->field_website_link['und'][0]['url']) ? $node->field_website_link['und'][0]['url'] : false;
 $website_title = isset($node->field_website_link['und'][0]['title']) ? $node->field_website_link['und'][0]['title'] : 'Visit the Website';
 
-$is_redeployment = isset($node->field_redeployment['und'][0]['value']) ? $node->field_redeployment['und'][0]['value'] : false;
 $redeployment_github_link = isset($node->field_redeployment_github_link['und'][0]['url']) ? $node->field_redeployment_github_link['und'][0]['url'] : false;
 $redeployment_website_link = isset($node->field_redeployment_website_link['und'][0]['url']) ? $node->field_redeployment_website_link['und'][0]['url'] : false;
 $redeployment_website_title = isset($node->field_redeployment_website_link['und'][0]['title']) ? $node->field_redeployment_website_link['und'][0]['title'] : 'Visit Original Project';
+
+$is_redeployment = isset($node->field_redeployment['und'][0]['value']) ? $node->field_redeployment['und'][0]['value'] : false;
+$has_project_links = ($website_link || $github_link);
+$has_press_links = (count($node->field_press_links['und']) > 0);
+$has_second_sidebar_content = (!empty($page['sidebar_second'])||$has_project_links||$is_redeployment||$has_press_links);
 
 
 /*
@@ -94,7 +98,7 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
 <section class="main">
     <div class="container">
         <div class="row">
-            <?php $_content_cols = 12 - 3 * !empty($page['sidebar_first']) - 4 * !empty($page['sidebar_second']) ?>
+            <?php $_content_cols = 12 - 3 * !empty($page['sidebar_first']) - 4 * $has_second_sidebar_content ?>
             <section class="main-col col-md-<?php print $_content_cols ?><?php print !empty($page['sidebar_first']) ? ' col-md-push-3' : ''  ?>">
                 <?php print $messages ?>
                 <?php print render($page['help']) ?>
@@ -112,11 +116,11 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
             
 
             <!-- RIGHT SIDEBAR -->
-            <?php if (!empty($page['sidebar_second'])): ?>
+            <?php if ($has_second_sidebar_content): ?>
                 <aside class="sidebar sidebar__second main-col col-md-4">
 
                     <!-- PROJECT LINKS -->
-                    <?php if($website_link || $github_link): ?>
+                    <?php if($has_project_links): ?>
                         <aside class="well">
                             <p><strong>Project Details</strong></p>
                             <div>
@@ -160,19 +164,17 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                     <?php endif; ?>
 
                     <!-- PRESS LINKS -->
-                    <?php if(true): ?>
+                    <?php if($has_press_links) : ?>
                         <aside class="well">
                             <p><strong>Related Media</strong></p>
                             <div>
-                                <?php if( count($node->field_press_links['und']) > 0) : ?>
-                                    <?php foreach ($node->field_press_links['und'] as $data) : ?>
-                                        <p>
-                                            <a href="<?php echo $data['url']; ?>">
-                                                <?php echo $data['title']; ?> <i class="fa fa-external-link"></i>
-                                            </a>
-                                        </p>
-                                    <?php endforeach; ?>
-                                <?php endif; ?>
+                                <?php foreach ($node->field_press_links['und'] as $data) : ?>
+                                    <p>
+                                        <a href="<?php echo $data['url']; ?>">
+                                            <?php echo $data['title']; ?> <i class="fa fa-external-link"></i>
+                                        </a>
+                                    </p>
+                                <?php endforeach; ?>
                             </div>
                         </aside>
                     <?php endif; ?>
