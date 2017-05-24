@@ -1,3 +1,4 @@
+/* HOME PAGE */
 .front .main .block-title {
     text-align: center;
 }
@@ -6,4 +7,12 @@
 }
 .front .main .block {
     margin-bottom: 3em;
+}
+
+/* PROJECT PAGES */
+.field-name-field-attached-files .field-items {
+    font-size: .9em;
+}
+.region-content .field-name-field-attached-files img {
+    border-width: 0px;
 }
