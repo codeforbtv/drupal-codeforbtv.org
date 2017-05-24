@@ -1,6 +1,14 @@
 <?php
+/**
+ * Note: normally content is modified in the node--xxx.tpl.php templates.  However
+ * in order to modify the sidebar to display node information I have to use a page
+ * template.  
+ * 
+ * Any theme changes to the way the main content is displayed should be done in a 
+ * cooresponding node--project.tpl.php template.
+ */
 
-
+// prepping data for use below
 $github_link = isset($node->field_github_link['und'][0]['url']) ? $node->field_github_link['und'][0]['url'] : false;
 $website_link = isset($node->field_website_link['und'][0]['url']) ? $node->field_website_link['und'][0]['url'] : false;
 $website_title = isset($node->field_website_link['und'][0]['title']) ? $node->field_website_link['und'][0]['title'] : 'Visit the Website';
@@ -107,8 +115,8 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
             <?php if (!empty($page['sidebar_second'])): ?>
                 <aside class="sidebar sidebar__second main-col col-md-4">
 
-                    <!-- RIGHT SIDEBAR -->
-                    <?php if($website_link || $github_link || true): ?>
+                    <!-- PROJECT LINKS -->
+                    <?php if($website_link || $github_link): ?>
                         <aside class="well">
                             <p><strong>Project Details</strong></p>
                             <div>
@@ -126,6 +134,8 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                             </div>
                         </aside>
                     <?php endif; ?>
+
+                    <!-- REDEPLOYMENT LINKS -->
                     <?php if($is_redeployment): ?>
                         <aside class="well">
                             <p><strong>Redeployment Details</strong></p>
@@ -149,7 +159,25 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                         </aside>
                     <?php endif; ?>
 
-                    <!-- render sidebar blocks -->
+                    <!-- PRESS LINKS -->
+                    <?php if(true): ?>
+                        <aside class="well">
+                            <p><strong>Related Media</strong></p>
+                            <div>
+                                <?php if( count($node->field_press_links['und']) > 0) : ?>
+                                    <?php foreach ($node->field_press_links['und'] as $data) : ?>
+                                        <p>
+                                            <a href="<?php echo $data['url']; ?>">
+                                                <?php echo $data['title']; ?> <i class="fa fa-external-link"></i>
+                                            </a>
+                                        </p>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                        </aside>
+                    <?php endif; ?>
+
+                    <!-- other sidebar blocks -->
                     <?php print render($page['sidebar_second']) ?>
                 </aside>
             <?php endif ?>
