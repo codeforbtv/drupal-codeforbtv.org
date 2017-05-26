@@ -166,13 +166,14 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                     <!-- PRESS LINKS -->
                     <?php if($has_press_links) : ?>
                         <aside class="well">
-                            <p><strong>Related Media</strong></p>
+                            <p><strong>Related Links</strong></p>
                             <div>
                                 <?php foreach ($node->field_press_links['und'] as $data) : ?>
                                     <p>
-                                        <a href="<?php echo $data['url']; ?>">
+                                        <a class="related-links__link" href="<?php echo $data['url']; ?>">
                                             <?php echo $data['title']; ?> <i class="fa fa-external-link"></i>
                                         </a>
+                                        <span class="related-links__url"><?php echo substr($data['url'], 0, 50)."..."; ?></span>
                                     </p>
                                 <?php endforeach; ?>
                             </div>
