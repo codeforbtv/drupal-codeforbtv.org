@@ -59,7 +59,7 @@
 }
 
 
-/** Featured Projects */
+/** Featured Project Badges */
 .page-home .block-title {
     text-align: center;
 }
@@ -141,8 +141,8 @@
     height: 96px;
     overflow: hidden;
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -4px;
+    right: 10px;
 }
 
 .ribbon {
