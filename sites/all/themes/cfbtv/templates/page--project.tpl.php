@@ -173,7 +173,7 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                                         <a class="related-links__link" href="<?php echo $data['url']; ?>">
                                             <?php echo $data['title']; ?> <i class="fa fa-external-link"></i>
                                         </a>
-                                        <span class="related-links__url"><?php echo substr($data['url'], 0, 50)."..."; ?></span>
+                                        <span class="related-links__url"><?php echo substr($data['url'], 0, 40)."..."; ?></span>
                                     </p>
                                 <?php endforeach; ?>
                             </div>
