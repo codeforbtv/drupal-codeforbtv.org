@@ -12,10 +12,11 @@
 $github_link = isset($node->field_github_link['und'][0]['url']) ? $node->field_github_link['und'][0]['url'] : false;
 $website_link = isset($node->field_website_link['und'][0]['url']) ? $node->field_website_link['und'][0]['url'] : false;
 $website_title = isset($node->field_website_link['und'][0]['title']) ? $node->field_website_link['und'][0]['title'] : 'Visit the Website';
-
 $redeployment_github_link = isset($node->field_redeployment_github_link['und'][0]['url']) ? $node->field_redeployment_github_link['und'][0]['url'] : false;
 $redeployment_website_link = isset($node->field_redeployment_website_link['und'][0]['url']) ? $node->field_redeployment_website_link['und'][0]['url'] : false;
 $redeployment_website_title = isset($node->field_redeployment_website_link['und'][0]['title']) ? $node->field_redeployment_website_link['und'][0]['title'] : 'Visit Original Project';
+$slack_channel = isset($node->field_slack_channel['und']) ? $node->field_slack_channel['und'][0]['value'] : false;
+$slack_link = ($slack_channel) ? "https://codeforbtv.slack.com/messages/$slack_channel/" : false;
 
 $is_redeployment = isset($node->field_redeployment['und'][0]['value']) ? $node->field_redeployment['und'][0]['value'] : false;
 $has_project_links = ($website_link || $github_link);
@@ -118,6 +119,19 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
             <!-- RIGHT SIDEBAR -->
             <?php if ($has_second_sidebar_content): ?>
                 <aside class="sidebar sidebar__second main-col col-md-4">
+
+                    <!-- SLACK CHANNEL -->
+                    <?php if($slack_channel): ?>
+                        <p>
+                            <strong>Discuss Online: </strong>
+                            <span class="btn btn-default">
+                                <a target="_blank" href="<?php echo $slack_link; ?>">
+                                    <img src="/sites/all/themes/cfbtv/images/slack_icon.png" data-pin-nopin="true" style="width: 20px;"> <?php echo $slack_channel; ?>
+                                </a>
+                            </span>
+                        </p>
+                    <?php endif; ?>
+
 
                     <!-- PROJECT LINKS -->
                     <?php if($has_project_links): ?>
