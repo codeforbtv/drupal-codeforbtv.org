@@ -181,4 +181,22 @@
 }
 .ribbon:after {
     right: 0;
-}​
+}
+
+.field-type-taxonomy-term-reference .field-item {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: #eee;
+    display: inline-block;
+    font-size: .7em;
+    padding: 3px 5px;
+    margin: 3px 5px;
+}
+.field-type-taxonomy-term-reference .field-item:hover {
+    border: 1px solid gray;
+    background-color: #f3f3f3;
+}
+.field-type-taxonomy-term-reference a {
+    color: #666;
+    text-decoration: none;
+}
