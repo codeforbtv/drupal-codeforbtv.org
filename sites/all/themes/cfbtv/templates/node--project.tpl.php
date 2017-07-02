@@ -96,13 +96,25 @@
   </header>
   <?php endif; ?>
   <?php
-    // Hide comments, tags, and links now so that we can render them later.
+    // Hide fields that we want to render later.
+    hide($content['field_problem_statement']);
+    hide($content['body']);
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_skills']);
-    print render($content);
   ?>
+
+    <?php // Problem Statement ?>
+    <h2>Problem Statement</h2>
+    <?php print render($content['field_problem_statement']); ?>  
+
+    <?php // Project Description (aka body) ?>
+    <h2>Project Summary</h2>
+    <?php print render($content['body']); ?>  
+
+    <?php // Print remaining exposed content ?>
+    <?php print render($content); ?>
   <hr>
   <?php print render($content['field_skills']); ?>
   <?php print render($content['comments']); ?>
