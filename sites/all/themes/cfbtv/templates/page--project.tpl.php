@@ -20,7 +20,7 @@ $slack_link = ($slack_channel) ? "https://codeforbtv.slack.com/messages/$slack_c
 
 $is_redeployment = isset($node->field_redeployment['und'][0]['value']) ? $node->field_redeployment['und'][0]['value'] : false;
 $has_project_links = ($website_link || $github_link);
-$has_press_links = (count($node->field_press_links['und']) > 0);
+$has_press_links = (isset($node->field_press_links['und']) && count($node->field_press_links['und']) > 0);
 $has_second_sidebar_content = (!empty($page['sidebar_second'])||$has_project_links||$is_redeployment||$has_press_links);
 
 
