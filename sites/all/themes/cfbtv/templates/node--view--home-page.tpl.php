@@ -1,5 +1,13 @@
 <?php
 /**
+ * NOTE: This view template is called 'home-page', but it is actually associated
+ * with the "Blog" view.  Originally this view was used as the homepage (and named
+ * accordingly) and you cannot change the drupal machine name for a view easily.
+ * 
+ * However, if at some point I do have time to fix this, it's a matter of doing an
+ * export/edit/import of the view as directed by this SO post: 
+ * https://drupal.stackexchange.com/questions/14385/how-do-i-display-edit-the-machine-name-for-a-view#53044
+ *
  * @file
  * Default theme implementation to display a node.
  *

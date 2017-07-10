@@ -134,7 +134,7 @@
 }
 
 
-/** Diagonal Ribbons */
+/** DIAGONAL RIBBONS */
 
 .ribbon-wrapper {
     width: 96px;
@@ -199,4 +199,9 @@
 .field-type-taxonomy-term-reference a {
     color: #666;
     text-decoration: none;
+}
+
+/* BLOG TEASERS */
+.node-blog-post h3 { 
+    margin-top: 0; 
 }
