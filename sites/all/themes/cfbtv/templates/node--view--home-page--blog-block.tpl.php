@@ -85,6 +85,7 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
+    hide($content['readmore']);
   ?>
 
   <div class="row">
@@ -93,11 +94,8 @@
     </div>
     <div class="col-md-8">
       <h3 <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-      <?php if ($display_submitted): ?>
-        <p class="submitted"><?php print $submitted; ?></p>
-      <?php endif; ?>
-      <?php print render($content['field_summary']); ?>  
-      <p>
+      <p><?php print render($content['field_summary']); ?></p>
+      <p><?php print l("full post »", "node/".$node->nid); ?></p>
     </div>
   </div>
 </article>
