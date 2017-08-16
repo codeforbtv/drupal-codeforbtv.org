@@ -123,11 +123,13 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
                     <!-- SLACK CHANNEL -->
                     <?php if($slack_channel): ?>
                         <p>
-                            <strong>Discuss Online: </strong>
                             <span class="btn btn-default">
                                 <a target="_blank" href="<?php echo $slack_link; ?>">
                                     <img src="/sites/all/themes/cfbtv/images/slack_icon.png" data-pin-nopin="true" style="width: 20px;"> <?php echo $slack_channel; ?>
                                 </a>
+                            </span>
+                            <span class="help-link">
+                              <a href="https://cfbtv-slackin.herokuapp.com/" target="_blank">join our slack</a>
                             </span>
                         </p>
                     <?php endif; ?>

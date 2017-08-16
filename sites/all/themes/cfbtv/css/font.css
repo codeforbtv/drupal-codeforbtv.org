@@ -38,3 +38,9 @@ aside.sidebar {
 .footer {
 	font-size: .8em;
 }
+
+.help-link {
+  font-size: small;
+  text-decoration: underline;
+  padding: 0 10px;
+}
