@@ -183,6 +183,8 @@
     right: 0;
 }
 
+/* TAXONOMY */
+
 .field-type-taxonomy-term-reference .field-item {
     border: 1px solid lightgray;
     border-radius: 3px;

@@ -3,6 +3,56 @@
     display: none;
 }
 
+/* COMMENTS */
+.comment__intro--permalink, 
+.comment__intro--title,
+.comment__intro--date {
+	display: inline-block;
+}
+.comment__intro {
+	margin-left: -1.25em;
+}
+.comment__intro--permalink {
+	color: #f5f5f5;
+}
+.comment__intro:hover .comment__intro--permalink {
+	color: #7bc6ff;
+}
+.comment__intro--new {
+    margin-right: .75em;
+}
+.comment__intro--title {
+	margin-bottom: 0;
+}
+.comment__intro--title a {
+	color: #777;
+}
+.comment__intro--date {
+    font-size: .7em;
+    font-style: italic;
+    color: #999;
+}
+#comments .indented {
+    margin-left: .5em;
+    border-left: 1px dashed lightgrey;
+    padding-left: 1.5em;
+}
+.comment .links li {
+    font-size: .8em;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+.comment .links li a {
+	color: lightgrey;
+}
+.comment .links li:hover {
+	border: 1px solid #7bc6ff;
+}
+.comment .links li:hover a {
+	color: #7bc6ff;
+}
+
+/* FOOTER */
 .footer {
     background: #dbf0ff;
     border-top: 1px solid #4C99D3;
