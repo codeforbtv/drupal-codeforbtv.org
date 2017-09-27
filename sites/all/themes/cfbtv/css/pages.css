@@ -8,6 +8,11 @@
 .front .main .block {
     margin-bottom: 3em;
 }
+.view-display-id-blog_block .views-row {
+    margin-bottom: 20px;
+    border-bottom: 1px lightgray dotted;
+    padding-bottom: 20px;
+}
 
 /* PROJECT PAGES */
 .field-name-field-attached-files .field-items {
