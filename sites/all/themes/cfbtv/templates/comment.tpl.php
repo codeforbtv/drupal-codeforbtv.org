@@ -68,14 +68,15 @@ $dateTime = format_date($comment->created, 'custom', "gia");
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print $picture ?>
 
-  <?php if ($new): ?>
-    <span class="new btn btn-default btn-xs btn-success"><?php print $new ?></span>
-  <?php endif; ?>
-
   <div class="comment__intro">
     <a class="comment__intro--permalink" title="comment permalink" href="<?php echo url('node/'. $node->nid) . "#comment-" . $comment->cid; ?>">
       <i class="fa fa-link" aria-hidden="true"></i>
     </a>
+
+    <?php if ($new): ?>
+      <span class="comment__intro--new btn btn-default btn-xs btn-success"><?php print $new ?></span>
+    <?php endif; ?>
+
     <?php print render($title_prefix); ?>
     <h3 class="comment__intro--title"><?php print $title_attributes; ?><?php print $title ?></h3>
     <?php print render($title_suffix); ?>
