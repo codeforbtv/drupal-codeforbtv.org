@@ -19,9 +19,9 @@ project = "multistep"
 datestamp = "1380592359"
 
 
-; Information added by Drupal.org packaging script on 2017-02-08
+; Information added by Drupal.org packaging script on 2017-04-13
 version = "7.x-2.x-dev"
 core = "7.x"
 project = "multistep"
-datestamp = "1486587785"
+datestamp = "1492102145"
 
