@@ -1,0 +1,12 @@
+name = Feature: Site Redirects
+description =  Site behavior for aliases and redirecting pages
+core = 7.x
+package = Features
+version = 7.x-0.1
+dependencies[] = features
+dependencies[] = redirect
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[user_permission][] = administer redirects
+features_exclude[dependencies][ctools] = ctools

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature: Site Redirects feature.
+ */
+
+include_once 'feature_site_redirects.features.inc';
