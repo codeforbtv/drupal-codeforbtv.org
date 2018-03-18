@@ -21,7 +21,7 @@ function feature_projects_taxonomy_default_vocabularies() {
       'name' => 'Skills',
       'machine_name' => 'skills',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
     ),

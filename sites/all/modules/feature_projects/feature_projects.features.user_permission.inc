@@ -25,6 +25,7 @@ function feature_projects_user_default_permissions() {
     'name' => 'delete own project content',
     'roles' => array(
       'admin' => 'admin',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -35,6 +36,7 @@ function feature_projects_user_default_permissions() {
     'name' => 'delete terms in project_life_cycle',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'taxonomy',
   );
@@ -44,6 +46,7 @@ function feature_projects_user_default_permissions() {
     'name' => 'delete terms in skills',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'taxonomy',
   );
@@ -63,6 +66,7 @@ function feature_projects_user_default_permissions() {
     'name' => 'edit own project content',
     'roles' => array(
       'admin' => 'admin',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -73,6 +77,7 @@ function feature_projects_user_default_permissions() {
     'name' => 'edit terms in project_life_cycle',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'taxonomy',
   );
@@ -82,6 +87,7 @@ function feature_projects_user_default_permissions() {
     'name' => 'edit terms in skills',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'taxonomy',
   );
