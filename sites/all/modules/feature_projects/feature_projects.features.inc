@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function feature_projects_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "captcha" && $api == "captcha") {
+    return array("version" => "1");
+  }
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }

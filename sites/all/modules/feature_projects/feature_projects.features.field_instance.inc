@@ -124,7 +124,7 @@ function feature_projects_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 10,
+      'weight' => 7,
     ),
   );
 
@@ -138,7 +138,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -184,7 +184,7 @@ function feature_projects_field_default_field_instances() {
         'resolution' => '1600x300',
       ),
       'type' => 'imagefield_crop_widget',
-      'weight' => 19,
+      'weight' => 7,
     ),
   );
 
@@ -198,7 +198,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'full' => array(
         'label' => 'above',
@@ -245,7 +245,7 @@ function feature_projects_field_default_field_instances() {
         'resolution' => '400x300',
       ),
       'type' => 'imagefield_crop_widget',
-      'weight' => 18,
+      'weight' => 6,
     ),
   );
 
@@ -260,7 +260,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -308,7 +308,45 @@ function feature_projects_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-project-field_help_wanted'.
+  $field_instances['node-project-field_help_wanted'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_help_wanted',
+    'label' => 'Help Wanted',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 10,
     ),
   );
 
@@ -323,7 +361,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -368,7 +406,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -416,7 +454,7 @@ function feature_projects_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 6,
     ),
   );
 
@@ -482,7 +520,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -533,7 +571,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'above',
@@ -561,7 +599,7 @@ function feature_projects_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 21,
+      'weight' => 6,
     ),
   );
 
@@ -576,7 +614,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'above',
@@ -624,7 +662,7 @@ function feature_projects_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 23,
+      'weight' => 9,
     ),
   );
 
@@ -639,7 +677,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'above',
@@ -687,7 +725,7 @@ function feature_projects_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 22,
+      'weight' => 7,
     ),
   );
 
@@ -754,7 +792,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -803,7 +841,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -852,7 +890,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'above',
@@ -901,7 +939,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'above',
@@ -949,7 +987,7 @@ function feature_projects_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 5,
     ),
   );
 
@@ -964,7 +1002,7 @@ function feature_projects_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'above',
@@ -1012,7 +1050,7 @@ function feature_projects_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 4,
     ),
   );
 
@@ -1023,6 +1061,7 @@ function feature_projects_field_default_field_instances() {
   t('Describe the <b>problem</b> this project addresses.  Avoid talking about your solution - save that for the project body.');
   t('Featured Image');
   t('Github Link');
+  t('Help Wanted');
   t('Is this project a redeployment?');
   t('Life Cycle');
   t('Needed Skills');

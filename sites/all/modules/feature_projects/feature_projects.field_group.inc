@@ -50,7 +50,7 @@ function feature_projects_field_group_info() {
   $field_group->parent_name = 'group_page';
   $field_group->data = array(
     'label' => 'Links',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_github_link',
       1 => 'field_website_link',
@@ -84,15 +84,12 @@ function feature_projects_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'body',
-      1 => 'field_life_cycle',
-      2 => 'field_synopsis',
-      3 => 'field_skills',
-      4 => 'field_attached_files',
-      5 => 'field_project_tags',
-      6 => 'field_summary',
-      7 => 'field_slack_channel',
-      8 => 'field_problem_statement',
-      9 => 'title',
+      1 => 'field_synopsis',
+      2 => 'field_attached_files',
+      3 => 'field_summary',
+      4 => 'field_slack_channel',
+      5 => 'field_problem_statement',
+      6 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -123,6 +120,7 @@ function feature_projects_field_group_info() {
       0 => 'group_banner_image',
       1 => 'group_page_details',
       2 => 'group_links',
+      3 => 'group_skills',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -146,7 +144,7 @@ function feature_projects_field_group_info() {
   $field_group->parent_name = 'group_links';
   $field_group->data = array(
     'label' => 'Redeployment',
-    'weight' => '12',
+    'weight' => '7',
     'children' => array(
       0 => 'field_redeployment_github_link',
       1 => 'field_redeployment_website_link',
@@ -166,6 +164,37 @@ function feature_projects_field_group_info() {
   );
   $field_groups['group_redeployment|node|project|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_skills|node|project|form';
+  $field_group->group_name = 'group_skills';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'project';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_page';
+  $field_group->data = array(
+    'label' => 'Skills & Needs',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_life_cycle',
+      1 => 'field_skills',
+      2 => 'field_project_tags',
+      3 => 'field_help_wanted',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'label' => 'Skills & Needs',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups['group_skills|node|project|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Images');
@@ -173,6 +202,7 @@ function feature_projects_field_group_info() {
   t('Page Details');
   t('Project Details');
   t('Redeployment');
+  t('Skills & Needs');
 
   return $field_groups;
 }
