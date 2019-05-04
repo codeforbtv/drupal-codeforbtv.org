@@ -9,7 +9,8 @@ if(isset($node->field_banner_image) && !empty($node->field_banner_image['und'][0
     drupal_add_css("header.header .jumbotron { background-image: url('$banner_image_url')}",$option['type'] = 'inline');
 } elseif(drupal_is_front_page()) {
     $homepage_hero_img = variable_get('hero_image_url');
-    drupal_add_css("header.header .jumbotron { background: url('$homepage_hero_img')}",$option['type'] = 'inline');
+    $homepage_hero_relative_url = substr($homepage_hero_img, strpos($homepage_hero_img, '.org/')+5);
+    drupal_add_css("header.header .jumbotron { background: url('$homepage_hero_relative_url')}",$option['type'] = 'inline');
 }
 ?>
 
