@@ -58,6 +58,14 @@
     border-bottom: solid 1px rgba(76, 153, 211, .4)
 }
 
+/* Top navigation donation link */
+.navbar-fixed-top .navbar-nav:first-child>li.last.leaf>a {
+    background: yellowgreen;
+    color: white;
+    padding: 8px 20px;
+    margin: 7px 5px;
+}
+
 
 /** Featured Project Badges */
 .page-home .block-title {
